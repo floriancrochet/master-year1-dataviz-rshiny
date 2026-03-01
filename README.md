@@ -72,8 +72,6 @@ master-year1-dataviz-rshiny/
 ├── LICENSE                                             # MIT License
 ├── README.md                                           # Project documentation
 ├── project.R                                           # Main Shiny app file
-├── readme_instructions.md                              # Prompt instructions
-└── template.md                                         # Template layout
 ```
 
 ---
