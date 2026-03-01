@@ -1,117 +1,98 @@
-# Legislative Elections 2024 — Shiny Web Application  
+# Interactive Visualization of the 2024 French Legislative Elections
 *A pedagogical R Shiny app for exploring and understanding the French legislative elections.*
 
 ---
 
-## 📘 Overview
-This project is an **interactive R Shiny application** designed to **inform users about the French legislative elections of 2024** through interactive visualizations, tables, and textual explanations.  
+## 🎯 Overview
+This project is an interactive R Shiny application designed to inform users about the French legislative elections of 2024 through interactive visualizations, tables, and textual explanations.  
 
-Developed as part of an academic **Shiny training project**, it combines web interactivity with data analysis and visualization to improve understanding of electoral mechanisms and party programs.
+Developed as part of an academic Shiny training project, it combines web interactivity with data analysis and visualization to improve understanding of electoral mechanisms and party programs.
 
 **Objectives**
 - Present the functioning and importance of legislative elections in France  
 - Visualize electoral results by city and constituency  
 - Provide summaries of political parties’ programs  
-- Allow users to explore information dynamically via maps, tables, and modals  
+- Enable dynamic exploration of information via maps, tables, and modals  
+
+---
+
+## 🗄️ Data
+- **Source:** Data sources for the 2024 French legislative elections (local and national datasets)
+- **Data Availability:** Provided in `data/`
 
 ---
 
 ## ⚙️ Features
-- Interactive navigation through multiple tabs (`navbarPage`)  
-- Integrated **maps** with `leaflet` for exploring constituencies  
-- **Dynamic tables** built with `DT`, including row color coding by political party  
-- **Modal windows** displaying detailed party programs and downloadable PDF files  
-- **Textual explanations** and **HTML content rendering** for contextual education  
-- **Interactive graphics** rendered with `ggiraph`  
+- Navigate interactively through multiple tabs (`navbarPage`).  
+- Explore constituencies using integrated maps with `leaflet`.  
+- Generate dynamic tables with `DT`, including row color coding by political party.  
+- Display detailed party programs and downloadable PDF files via modal windows.  
+- Render textual explanations and HTML content for contextual education.  
+- Render interactive graphics with `ggiraph`.  
 
 ---
 
 ## 🧰 Tech Stack
-**Language:** R  
-**Framework:** Shiny  
-**Libraries:**  
-- `shiny`, `shinythemes`, `shinyjs`  
-- `leaflet` (interactive maps)  
-- `DT` (dynamic tables)  
-- `stringi`, `dplyr`, `tidyr` (data manipulation)  
-- `ggiraph` (interactive plots)  
-- HTML and CSS integration for styling  
+- **Language:** R  
+- **Data Manipulation:** dplyr, tidyr, stringi  
+- **Visualization:** shiny, shinyjs, shinythemes, leaflet, DT, ggiraph
 
 ---
 
-## ⚙️ Installation
-To run the application locally:
-
-```bash
-# Install required packages if not already installed
+## 📦 Installation
+```r
 install.packages(c("shiny", "shinythemes", "shinyjs", "leaflet", "DT", "stringi", "dplyr", "tidyr", "ggiraph"))
-
-# Launch the app
-library(shiny)
-runApp("path/to/app")
 ```
 
-> À compléter : Add GitHub repository URL or deployment instructions if available.
-
 ---
 
-## 📚 Usage Example
+## 💻 Usage Example
+
+### Reproducing the Analysis / Execution Pipeline
+*(Expected runtime: ~5 seconds on AMD Ryzen 7)*
 
 ```r
-# Run the app locally
-shiny::runApp("path/to/legislatives2024_app")
+shiny::runApp("project.R")
 ```
-
-The application opens in a browser window.  
-Users can navigate through tabs to:
-- Read contextual information on elections  
-- Search for a city and visualize its results  
-- Display party programs and download associated PDFs  
-- Explore interactive tables and maps  
 
 ---
 
 ## 📂 Project Structure
 
+```text
+master-year1-dataviz-rshiny/
+├── data/                                               # Electoral datasets
+│   ├── cities_coordinates.rds                          # Geolocation data
+│   ├── election_results_candidates_by_constituency.rds # Main election dataset
+│   ├── unmapped_constituencies_all_rounds.rds          # Mapping edge cases
+│   └── unmapped_constituencies_first_round.rds         # First round edge cases
+├── www/                                                # Static assets
+│   ├── assets/                                         # UI assets
+│   └── references/                                     # Policy documents (PDFs)
+├── LICENSE                                             # MIT License
+├── README.md                                           # Project documentation
+├── project.R                                           # Main Shiny app file
+├── readme_instructions.md                              # Prompt instructions
+└── template.md                                         # Template layout
 ```
-legislatives2024_app/
-│
-├── www/                 # Static assets (images, CSS, PDFs)
-├── data/                # Electoral datasets (local and national)
-├── app.R                # Main Shiny app file
-├── server.R             # Server logic (if separated)
-├── ui.R                 # User interface (if separated)
-└── README.md
-```
-
-> À compléter : Confirm exact structure and file organization.
 
 ---
 
-## 📊 Results
-The application produces:
-- **Interactive maps** of constituencies with tooltips and dynamic zoom  
-- **Candidate tables** filtered by city or constituency, color-coded by party  
-- **Downloadable party programs** as PDF files  
-- **Dynamic modals** summarizing each party’s main policy proposals  
+## 📈 Results
 
-Example visualization:
-
-> À compléter (insert screenshot or GIF of the app interface)
+*(The application functions primarily as an interactive exploratory dashboard. No explicit predictive performance metrics or analytical conclusions were formulated in the current scope).*
 
 ---
 
-## 🧠 References
+## 📚 References
 - *support_formation_rshiny.pdf* — Training material on R Shiny structure, UI/server logic, and reactivity  
 - Posit Shiny Gallery — https://shiny.posit.co/r/gallery/  
 - Official Shiny documentation — https://shiny.posit.co/  
-- Data sources for the 2024 French legislative elections (to be specified)  
-> À compléter : Specify data provenance and bibliography if applicable.
 
 ---
 
 ## 📜 License
-This project is released under the **MIT License**.  
+This project is released under the MIT License.  
 © 2025 Juliette Grison and Florian Crochet
 
 ---
@@ -127,6 +108,6 @@ This project is released under the **MIT License**.
 
 ---
 
-## 💬 Acknowledgments
-Based on training resources from *support_formation_rshiny.pdf* and developed as part of an academic project on interactive data applications using R Shiny.  
-Special thanks to the R and Shiny open-source communities.
+## 🤝 Acknowledgments
+This work was conducted as part of an academic project on interactive data applications using R Shiny, supervised by **Marie Machefer**.  
+Based on training resources from *support_formation_rshiny.pdf*. Special thanks to the R and Shiny open-source communities.
