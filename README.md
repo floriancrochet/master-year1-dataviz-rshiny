@@ -61,17 +61,14 @@ shiny::runApp("project.R")
 
 ```text
 master-year1-dataviz-rshiny/
-├── data/                                               # Electoral datasets
-│   ├── cities_coordinates.rds                          # Geolocation data
-│   ├── election_results_candidates_by_constituency.rds # Main election dataset
-│   ├── unmapped_constituencies_all_rounds.rds          # Mapping edge cases
-│   └── unmapped_constituencies_first_round.rds         # First round edge cases
-├── www/                                                # Static assets
-│   ├── assets/                                         # UI assets
-│   └── references/                                     # Policy documents (PDFs)
-├── LICENSE                                             # MIT License
-├── README.md                                           # Project documentation
-├── project.R                                           # Main Shiny app file
+├── data/
+│   ├── cities_coordinates.rds
+│   ├── election_results_candidates_by_constituency.rds
+│   ├── unmapped_constituencies_all_rounds.rds
+│   └── unmapped_constituencies_first_round.rds
+├── LICENSE
+├── README.md
+└── project.R
 ```
 
 ---
