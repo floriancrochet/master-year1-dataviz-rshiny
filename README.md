@@ -66,8 +66,20 @@ master-year1-dataviz-rshiny/
 │   ├── election_results_candidates_by_constituency.rds
 │   ├── unmapped_constituencies_all_rounds.rds
 │   └── unmapped_constituencies_first_round.rds
+├── www/
+│   └── references/
+│       ├── debout_la_france_programme.pdf
+│       ├── ensemble_programme.pdf
+│       ├── horizon__programme.pdf
+│       ├── lutte_ouvriere_programme.pdf
+│       ├── nouveau_front_populaire_programme.pdf
+│       ├── rassemblement_national_programme.pdf
+│       ├── reconquête_programme.pdf
+│       └── union_des_démocrates_et_indépendants_programme.pdf
+├── .gitignore
 ├── LICENSE
 ├── README.md
+├── master-year1-dataviz-rshiny.Rproj
 └── project.R
 ```
 
